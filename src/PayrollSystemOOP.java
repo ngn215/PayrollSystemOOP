@@ -25,12 +25,12 @@ public class PayrollSystemOOP {
 			System.out.println("");
 		}
 		
+		System.out.println("----------------------------------");
+		
 		//Processing paychecks for Employees
 		for(int i=0; i<empFirstNames.length; i++)
 		{
-			Paycheck paycheck = new Paycheck(empList[i]);
-			paycheck.ProcessPaycheck();
-			paycheck.PrintPaycheckDetails();
+			empList[i].processPaycheckAndPrint();
 			System.out.println();
 		}
 	}
@@ -58,24 +58,21 @@ Employee : Paul, Sandeep
 Designation : Developer | Salary : 100000.0
 Timesheet Hours : 5 | Paid Off Hours : 0
 
-== PAYCHECK ===
-Arora, Karan
+----------------------------------
+** PAYCHECK for ARORA, KARAN **
 Gross Amount : 7692.31 | Amount to be Paid : 5770.77
 
-== PAYCHECK ===
-Singh, Rakesh
+** PAYCHECK for SINGH, RAKESH **
 Gross Amount : 6923.08 | Amount to be Paid : 5193.69
 
-== PAYCHECK ===
-Parwal, Anish
+** PAYCHECK for PARWAL, ANISH **
 Gross Amount : 5769.23 | Amount to be Paid : 4328.08
 
-== PAYCHECK ===
-Bhatti, Prakash
+** PAYCHECK for BHATTI, PRAKASH **
 Gross Amount : 4615.38 | Amount to be Paid : 3462.46
 
-== PAYCHECK ===
-Paul, Sandeep
+** PAYCHECK for PAUL, SANDEEP **
 Gross Amount : 3846.15 | Amount to be Paid : 2885.38
+
 
  */

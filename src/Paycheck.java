@@ -62,7 +62,7 @@ public class Paycheck {
 		return emp.getSalary() / 52.0 * 2.0;
 	}
 	
-	public void ProcessPaycheck()
+	public void processPaycheck()
 	{
 		double hourlyPay = getHourlyPay();
 		setGrossAmount(hourlyPay);
@@ -79,10 +79,9 @@ public class Paycheck {
 		setMedicareAmount(medicareAmount);
 	}
 	
-	public void PrintPaycheckDetails()
+	public void printPaycheckDetails()
 	{
-		System.out.println("== PAYCHECK ===");
-		System.out.println(this.emp.getLastName() + ", " + this.emp.getFirstName());
+		System.out.println("** PAYCHECK for " + emp.getLastName().toUpperCase() + ", " + emp.getFirstName().toUpperCase() + " **");
 		System.out.println("Gross Amount : " + this.getGrossAmount() + " | " + "Amount to be Paid : " + this.getToBePaidAmount());
 	}
 

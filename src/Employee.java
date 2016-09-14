@@ -6,6 +6,7 @@ public class Employee {
 	private String lastName;
 	private double salary;
 	private Timesheet timesheet;
+	private Paycheck paycheck;
 	
 	public Employee(String lastName, String firstName, String designation, double salary)
 	{
@@ -14,6 +15,7 @@ public class Employee {
 		setDesignation(designation);
 		setSalary(salary);
 		timesheet = new Timesheet();
+		paycheck = new Paycheck(this);
 	}
 	
 	public String getDesignation() {
@@ -67,6 +69,10 @@ public class Employee {
 		System.out.println("Timesheet Hours : " + getHours() + " | Paid Off Hours : " + getPaidOffHours());
 	}
 
-	
+	public void processPaycheckAndPrint()
+	{
+		paycheck.processPaycheck();
+		paycheck.printPaycheckDetails();
+	}
 
 }
